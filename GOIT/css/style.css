@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+    outline: none;
+}
+:root {
+    --black: #1B1D1F;
+    --orange: #FF8E3D;
+    --white: #FFFFFF;
+    --blue: #005BBB;
+}
+/*https://www.w3schools.com/tags/ref_pxtoemconversion.asp*/
+/*//////////////////////*/
+body{
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 16px; 
+    color: --black;
+    font-weight: 600;
+}
+.wrapper{
+    max-width: 100%;
+    margin: 0 auto;
+}
+header{
+    background: rgb(252,254,254);
+    background: -moz-linear-gradient(90deg, rgba(252,254,254,1) 0%, rgba(165,222,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(252,254,254,1) 0%, rgba(165,222,255,1) 100%);
+    background: url("../img/Gus1.svg"), linear-gradient(90deg, rgba(252,254,254,1) 0%, rgba(165,222,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfefe",endColorstr="#a5deff",GradientType=1);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, top;
+    background-size: contain;
+    padding: 2.5em 50% 10.9375em 5.625em;
+    box-sizing: border-box;
+}
+header .logo{
+    margin-bottom: 5em;
+    cursor: pointer;
+    display: inline-block;
+}
+header .textBlock{
+    border-radius: 3.75em;
+    background: var(--white);
+    padding: 2.5em 3.75em;
+}
+header .textBlock h2{
+    font-size: 1em;    
+    line-height: normal;
+    margin-bottom: 40px;   
+}
+header .textBlock h1{
+    font-size: 4em;
+    line-height: 1.5em;
+    margin-bottom: 40px; 
+}
+header .textBlock p, main > p{
+    font-size: 1em; 
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 2.5em; 
+}
+header .textBlock button, .formBlock > .form .formFields button{
+    display: inline-flex;
+    padding: 0.75em 1.5em;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625em;
+    border-radius: 8px;
+    border: 0;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1em; 
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: Montserrat;
+    cursor: pointer;
+}
+
+/*main*/
+main{
+    text-align: center;
+    padding: 2.5em 95px;
+    box-sizing: border-box;
+}
+main h3{
+    font-size: 3em;
+    color: var(--black);
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+main h3::before {
+    content: url(../img/trezub.svg);
+    display: block;
+    margin-bottom: 40px;
+    height: 52px;
+}
+main > p{
+    padding: 0 200px;
+    margin-bottom: 30px;
+}
+main .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 26px;
+    grid-row-gap: 0px;
+    margin-bottom: 60px;
+}
+    
+main .parent .div1 { grid-area: 1 / 1 / 2 / 2; }
+main .parent .div2 { grid-area: 1 / 2 / 2 / 3; }
+main .parent .div3 { grid-area: 1 / 3 / 2 / 4; }
+
+.parent h4{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+.parent p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+/*formBlock*/
+.formBlock{
+    background: rgb(252,254,254);
+    background: -moz-linear-gradient(90deg, rgba(252,254,254,1) 0%, rgba(165,222,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(252,254,254,1) 0%, rgba(165,222,255,1) 100%);
+    background: linear-gradient(90deg, rgba(252,254,254,1) 0%, rgba(165,222,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfefe",endColorstr="#a5deff",GradientType=1);
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 3.75em 29%;
+    box-sizing: border-box;
+}
+.formBlock > .form{
+    max-width: 570px;
+    border-radius: 3.75em;
+    background: var(--white);
+    padding: 2.5em 3.75em;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.formBlock > .form h5{    
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+.formBlock > .form h5::before {
+    content: url(../img/trezub.svg);
+    display: block;
+    margin-bottom: 40px;
+    height: 52px;
+}
+.formBlock > .form p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+.formBlock > .form .formFields{
+    text-align: left;
+    
+}
+.formBlock > .form .formFields label{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    display: block;
+    
+}
+.formBlock > .form .formFields input{
+    border-radius: 8px;
+    border: 2px solid var(--blue);
+    background: var(--white);
+    height: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+.formBlock > .form .formFields input:focus{
+    border: 2px solid var(--orange);
+}
+.formBlock > .form .formFields button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+/*gus*/
+.gus-anim {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
